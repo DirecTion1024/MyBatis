@@ -3,9 +3,13 @@
 <mapper
 	namespace="MyBatis.MyBatis.UserMapper">
 	
-	<select id="selectUserByID" parameterType="int" resultType="User">
-        select * from `user` where id = #{id}
+	<select id="selectUserByID" parameterType="int" resultType="MyBatis.MyBatis.User">
+        select * from `homework` where id = #{id}
     </select>
 	
+	<insert id="addHomework" parameterType="MyBatis.MyBatis.User">
+		insert into `homework`(id,userName,userGender,userAge,userPhone,userAddress)
+		values (#{id},#{userName},#{userGender},#{userAge},#{userPhone},#{userAddress})
+	</insert> 
 	
 </mapper>
