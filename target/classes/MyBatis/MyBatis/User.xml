@@ -12,4 +12,9 @@
 		values (#{id},#{userName},#{userGender},#{userAge},#{userPhone},#{userAddress})
 	</insert> 
 	
+	<update id="updateHomework" parameterType="MyBatis.MyBatis.User">
+	   update homework set userName = #{userName}
+	   where id = #{id}
+	</update>
+	
 </mapper>
