@@ -27,7 +27,7 @@ public class TestDelete{
     public static void main(String[] args) {
         SqlSession session = sqlSessionFactory.openSession();
         try {
-        	session.delete("MyBatis.MyBatis.UserMapper.deleteById",3);
+        	session.delete("MyBatis.MyBatis.UserMapper.deleteById",1);
         	session.commit();
         } finally {
         session.close();

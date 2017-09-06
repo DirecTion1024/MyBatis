@@ -28,7 +28,7 @@ public class TestSelect {
     public static void main(String[] args) {
         SqlSession session = sqlSessionFactory.openSession();
         try {
-        User user = (User) session.selectOne("MyBatis.MyBatis.UserMapper.selectUserByID",2);
+        User user = (User) session.selectOne("MyBatis.MyBatis.UserMapper.selectUserByID",1);
         System.out.println(user.getUserAge());
         System.out.println(user.getUserGender());
         System.out.println(user.getUserPhone());
